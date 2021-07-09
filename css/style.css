@@ -416,6 +416,10 @@ template {
   text-transform: uppercase;
 }
 
+.logo {
+  width: 177px;
+}
+
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,5 +475,20 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 760px;
+  }
+  .header__search {
+    margin-left: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
