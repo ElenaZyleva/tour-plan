@@ -5,17 +5,50 @@
     .container
         max-width: 700px
     .header
+        &-top
+            padding: 30px 0
         &__search
-            margin-left: auto
+            margin-left: auto            
     .logo
         width: 133px
     .navbar 
-        margin: 22px 0  
+        padding: 22px 0  
         &-menu
             &__link
                 f-size: 12px
                 line-height: 15px
+    .search
+        &__input
+             width: 340px
 @media ( max-width:  767px)
     .container
         max-width: 560px
+    .navbar
+        display: none
+    .header
+        &__search, &__user
+            display: none
+    .logo
+        width: 133px
+    .menu
+        &-button
+            display: flex
+            width: 16px
+            height: 11px
+            align-items: center
+            justify-content: space-between
+            flex-direction: column
+            border: none
+            cursor: pointer
+            &__line
+                width: 16px
+                height: 1px
+                background-color: $text-color
+@media ( max-width:  576px)
+    .container
+        width: 90%
+    .logo
+        width: 99px
+            
+
      
