@@ -512,6 +512,31 @@ template {
   color: inherit;
 }
 
+.hotel {
+  padding-top: 23px;
+  padding-bottom: 70px;
+}
+
+.hotel-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hotel-name {
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-style: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
