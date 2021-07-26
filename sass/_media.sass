@@ -159,24 +159,32 @@
     .slider
         width: 100%
         &__img
-           height: 198px  
+           height: 198px 
+           width: 320px 
+           object-fit: cover
         &-button
-            background-size: 7px
+            width: 15px
+            height: 15px
+            background-size: 6px
                           
 
 @media ( max-width:  360px)
     .container, .newsletter-wrapper
-        max-width: 278px
+        max-width: 280px
     .swiper-container
         width: 100%
-        height: 172px
+        height: 179px
     .swiper-slide
         object-fit: cover
     .slider        
         width: 278px
+        height: 179px
         &__img
-           height: 172px
+           height: 179px
+           width: 278px        
         &-button
-            width: 20px
-            height: 20px
-            background-size: 7px
+            width: 11px
+            height: 11px
+            background-size: 4px  
+    .map         
+        height: 172px
