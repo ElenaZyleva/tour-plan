@@ -8,6 +8,7 @@ const swiper = new Swiper('.swiper-container', {
       prevEl: '.slider-button--prev',
     },
     
+    // Enable keyboard navigation by Page Up and Page Down keys
     keyboard: {
       enabled: true,      
       pageUpDown: true,
