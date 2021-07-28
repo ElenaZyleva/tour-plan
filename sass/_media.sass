@@ -3,7 +3,15 @@
         max-width: 960px
     .hotel
         &-slider
-            width: 580px        
+            width: 576px
+            border-radius: 8px
+            &__item
+                width: 100%
+                object-fit: cover
+        &__slider
+            margin-right: 20px            
+            border-radius: 8px 
+
 @media ( max-width:  991px)
     .container, 
     .newsletter-wrapper
@@ -24,20 +32,18 @@
     .search
         &__input
              width: 340px
-    // .swiper-container
-    //     width: 100%
-    //     height: 450px
-    .swiper-slide
-        object-fit: cover
-            
+    
     .hotel
         &-slider
             width: 700px
             height: 450px
         &-grid
             flex-direction: column
+        
         &__slider
-            margin-bottom: 30px    
+            margin-bottom: 30px
+            object-fit: cover
+            border-radius: 8px    
         &-right
             flex-direction: row
     .booking
@@ -107,13 +113,11 @@
             width: 100%
             height: 330px
             &__img
-                width: 560px  
-    // .swiper-container
-    //     width: 100%
-    //     height: 330px
+                width: 560px 
+                object-fit: cover 
     .swiper-slide
         object-fit: cover     
-                 
+                
     .booking
         width: 100%  
     .map
@@ -149,9 +153,6 @@
         max-width: 460px
     .logo
         width: 99px
-    // .swiper-container
-    //     width: 100%
-    //     height: 285px
     .swiper-slide
         object-fit: cover
     .hotel
@@ -190,18 +191,14 @@
 @media ( max-width:  480px)
     .container, .newsletter-wrapper
         max-width: 320px
-    // .swiper-container
-    //     width: 100%
-    //     height: 198px
-    // .swiper-slide
-    //     object-fit: cover
     .hotel
         &-slider
-            width: 100%
-            &__img
             height: 198px 
-            width: 320px 
-            object-fit: cover
+            width: 320px
+            &__img
+                height: 198px 
+                width: 320px 
+                object-fit: cover
             &__button
                 width: 15px
                 height: 15px
@@ -219,9 +216,6 @@
 @media ( max-width:  360px)
     .container, .newsletter-wrapper
         max-width: 280px
-    // .swiper-container
-    //     width: 100%
-    //     height: 179px
     .swiper-slide
         object-fit: cover
     .hotel
@@ -231,7 +225,8 @@
             overflow: hidden
             &__img
                 height: 179px
-                width: 278px        
+                width: 278px 
+                object-fit: cover       
             &__button
                 width: 11px
                 height: 11px

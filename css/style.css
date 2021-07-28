@@ -596,6 +596,7 @@ template {
 
 .hotel-slider {
   width: 728px;
+  border-radius: 8px;
 }
 
 .hotel-slider__item {
@@ -603,6 +604,8 @@ template {
   width: 100%;
   height: 450px;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
 }
 
@@ -1054,7 +1057,17 @@ template {
     max-width: 960px;
   }
   .hotel-slider {
-    width: 580px;
+    width: 576px;
+    border-radius: 8px;
+  }
+  .hotel-slider__item {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hotel__slider {
+    margin-right: 20px;
+    border-radius: 8px;
   }
 }
 
@@ -1082,10 +1095,6 @@ template {
   .search__input {
     width: 340px;
   }
-  .swiper-slide {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   .hotel-slider {
     width: 700px;
     height: 450px;
@@ -1098,6 +1107,9 @@ template {
   }
   .hotel__slider {
     margin-bottom: 30px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 8px;
   }
   .hotel-right {
     -webkit-box-orient: horizontal;
@@ -1212,6 +1224,8 @@ template {
   }
   .hotel-slider__img {
     width: 560px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .swiper-slide {
     -o-object-fit: cover;
@@ -1321,7 +1335,10 @@ template {
     max-width: 320px;
   }
   .hotel-slider {
-    width: 100%;
+    height: 198px;
+    width: 320px;
+  }
+  .hotel-slider__img {
     height: 198px;
     width: 320px;
     -o-object-fit: cover;
@@ -1362,6 +1379,8 @@ template {
   .hotel-slider__img {
     height: 179px;
     width: 278px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .hotel-slider__button {
     width: 11px;
