@@ -1083,7 +1083,7 @@ template {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 255px;
-  height: 255px;
+  min-height: 255px;
   padding: 24px 26px;
   overflow: hidden;
   border-radius: 6px;
@@ -1157,7 +1157,7 @@ template {
   }
   .card {
     width: 230px;
-    height: 230px;
+    min-height: 230px;
   }
   .card__image {
     left: -23%;
@@ -1241,7 +1241,7 @@ template {
   }
   .card {
     width: 339px;
-    height: 255px;
+    min-height: 255px;
   }
   .card__image {
     left: -12%;
@@ -1400,7 +1400,7 @@ template {
   }
   .card {
     width: 270px;
-    height: 255px;
+    min-height: 255px;
   }
   .card::before {
     width: 100%;
@@ -1466,7 +1466,7 @@ template {
   }
   .card {
     width: 220px;
-    height: 220px;
+    min-height: 220px;
   }
   .card__image {
     left: -23%;
@@ -1509,9 +1509,23 @@ template {
     padding-bottom: 60px;
     padding-top: 40px;
   }
+  .activities__title {
+    font-size: 20px;
+    line-height: 25px;
+  }
   .card {
     width: 100%;
-    height: 255px;
+    min-height: 255px;
+  }
+  .card:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .card:nth-child(4) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .card__image {
     left: -20%;
@@ -1545,6 +1559,10 @@ template {
   }
   .map {
     height: 172px;
+  }
+  .activities__title {
+    font-size: 18px;
+    line-height: 23px;
   }
 }
 /*# sourceMappingURL=style.css.map */

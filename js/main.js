@@ -18,6 +18,7 @@ var hotelSlider = new Swiper('.hotel-slider', {
   var reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters    
     loop: true,
+    autoHeight: true,
   
     // Navigation arrows
     navigation: {
