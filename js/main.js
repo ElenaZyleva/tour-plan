@@ -31,3 +31,5 @@ var hotelSlider = new Swiper('.hotel-slider', {
       pageUpDown: true,
     },
   });
+
+  $('.newsletter').parallax({imageSrc: '/img/newsletter-bg.jpg'});
