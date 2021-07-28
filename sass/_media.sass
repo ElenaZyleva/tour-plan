@@ -1,3 +1,4 @@
+/* max-width:  1200px */ 
 @media (max-width: 1200px)
     .container
         max-width: 960px
@@ -11,7 +12,16 @@
         &__slider
             margin-right: 20px            
             border-radius: 8px 
+    .card
+        width: 230px
+        height: 230px
+        &__image
+            left: -23%
+        &::before
+            width: 230px
+            height: 230px
 
+/* max-width:  991px */ 
 @media ( max-width:  991px)
     .container, 
     .newsletter-wrapper
@@ -59,7 +69,21 @@
         &-slider
             &__item
                 max-width: 580px
-    
+    .activities 
+        &-wrapper
+            flex-wrap: wrap 
+        &__card
+            margin-bottom: 20px  
+    .card
+        width: 339px
+        height: 255px
+        &__image
+            left: -12%
+        &::before
+            width: 339px
+            height: 255px
+
+/* max-width:  767px */         
 @media ( max-width:  767px)
     .container
         max-width: 560px
@@ -146,8 +170,20 @@
                     right: 50%
                     margin-right: -65px
                     transform: translate(50%, 0)
+    .activities 
+        padding-bottom: 70px
+        &-wrapper
+            flex-wrap: wrap   
+    .card        
+        width: 270px
+        height: 255px
+        &::before
+            width: 100%
+            height: 100%
+        &__image
+            left: -16%    
                         
-
+/* max-width:  576px */ 
 @media ( max-width:  576px)
     .container, .newsletter-wrapper
         max-width: 460px
@@ -188,6 +224,13 @@
             margin-bottom: 46px            
             font-size: 24px
             line-height: 30px
+    .card        
+        width: 220px
+        height: 220px
+        &__image
+            left: -23%
+            
+/* max-width:  480px */
 @media ( max-width:  480px)
     .container, .newsletter-wrapper
         max-width: 320px
@@ -213,6 +256,16 @@
         &-slider
             &__item                           
                 padding: 0 20px 30px
+    .activities 
+        padding-bottom: 60px
+        padding-top: 40px
+    .card        
+        width: 100%
+        height: 255px 
+        &__image
+            left: -20%
+
+/* max-width:  360px */            
 @media ( max-width:  360px)
     .container, .newsletter-wrapper
         max-width: 280px
