@@ -936,7 +936,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin: 45px auto 0;
   padding: 0 62px 30px;
   background-color: #ffffff;
@@ -1053,8 +1053,8 @@ template {
   .container {
     max-width: 960px;
   }
-  .slider {
-    width: 590px;
+  .hotel-slider {
+    width: 580px;
   }
 }
 
@@ -1082,16 +1082,13 @@ template {
   .search__input {
     width: 340px;
   }
-  .swiper-container {
-    width: 100%;
-    height: 450px;
-  }
   .swiper-slide {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .slider {
+  .hotel-slider {
     width: 700px;
+    height: 450px;
   }
   .hotel-grid {
     -webkit-box-orient: vertical;
@@ -1113,6 +1110,17 @@ template {
   }
   .map {
     width: 340px;
+  }
+  .reviews {
+    padding: 40px 0 60px 0;
+  }
+  .reviews__title {
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .reviews-slider__item {
+    max-width: 580px;
   }
 }
 
@@ -1198,19 +1206,16 @@ template {
   .hotel-right__info {
     margin-bottom: 30px;
   }
-  .swiper-container {
+  .hotel-slider {
     width: 100%;
     height: 330px;
+  }
+  .hotel-slider__img {
+    width: 560px;
   }
   .swiper-slide {
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  .slider {
-    width: 100%;
-  }
-  .slider__img {
-    width: 560px;
   }
   .booking {
     width: 100%;
@@ -1234,6 +1239,27 @@ template {
   .newsletter__title {
     margin-bottom: 37px;
   }
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item::after, .reviews-slider__item::before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 32px;
+  }
+  .reviews-slider__button--prev {
+    left: 50%;
+    margin-left: -65px;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .reviews-slider__button--next {
+    right: 50%;
+    margin-right: -65px;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
 }
 
 @media (max-width: 576px) {
@@ -1242,10 +1268,6 @@ template {
   }
   .logo {
     width: 99px;
-  }
-  .swiper-container {
-    width: 100%;
-    height: 285px;
   }
   .swiper-slide {
     -o-object-fit: cover;
@@ -1260,13 +1282,14 @@ template {
   .hotel-right__info {
     margin-bottom: 20px;
   }
-  .slider {
-    height: 100%;
+  .hotel-slider {
+    height: 285px;
+    width: 100%;
   }
-  .slider__img {
+  .hotel-slider__img {
     height: 285px;
   }
-  .slider-button {
+  .hotel-slider__button {
     width: 10px;
     height: 10px;
     background-size: 7px;
@@ -1285,33 +1308,41 @@ template {
   .subscribe {
     width: 100%;
   }
+  .reviews__title {
+    padding: 0 10px;
+    margin-bottom: 46px;
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 @media (max-width: 480px) {
   .container, .newsletter-wrapper {
     max-width: 320px;
   }
-  .swiper-container {
+  .hotel-slider {
     width: 100%;
-    height: 198px;
-  }
-  .swiper-slide {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .slider {
-    width: 100%;
-  }
-  .slider__img {
     height: 198px;
     width: 320px;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .slider-button {
+  .hotel-slider__button {
     width: 15px;
     height: 15px;
     background-size: 6px;
+  }
+  .reviews {
+    padding: 40px 0 50px 0;
+  }
+  .reviews__title {
+    padding: 0 20px;
+    margin-bottom: 42px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .reviews-slider__item {
+    padding: 0 20px 30px;
   }
 }
 
@@ -1319,23 +1350,20 @@ template {
   .container, .newsletter-wrapper {
     max-width: 280px;
   }
-  .swiper-container {
-    width: 100%;
-    height: 179px;
-  }
   .swiper-slide {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .slider {
+  .hotel-slider {
     width: 278px;
     height: 179px;
+    overflow: hidden;
   }
-  .slider__img {
+  .hotel-slider__img {
     height: 179px;
     width: 278px;
   }
-  .slider-button {
+  .hotel-slider__button {
     width: 11px;
     height: 11px;
     background-size: 4px;
