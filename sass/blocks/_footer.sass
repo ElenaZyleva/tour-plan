@@ -26,6 +26,7 @@
                 margin-right: 0
         &-network
             display: flex
+            flex-wrap: wrap
             align-items: center
             grid-row: 2 / 4
             grid-column: 3 / 4
@@ -71,6 +72,10 @@
             width: 40px
     &__text
         margin-bottom: 22px
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 160%
         color: $link-color
     &__input
         padding: 0 23px 
@@ -120,6 +125,11 @@
             grid-column: 1 / 2             
         &-link                     
             margin-right: 15px
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+            line-height: 15px
+            color: $light
             &:nth-last-child()
                 margin-right: 0
     &__pay-icons
