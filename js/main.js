@@ -34,3 +34,8 @@ var hotelSlider = new Swiper('.hotel-slider', {
   });
 
   $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpg'});
+
+  var menuButton = document.querySelector('.menu-button');
+  menuButton.addEventListener('click', function(){
+    document.querySelector('.navbar').classList.toggle('navbar--visible');
+  });

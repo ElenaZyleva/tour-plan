@@ -129,11 +129,42 @@
 @media ( max-width:  767px)
     .container
         max-width: 560px
+    body
+        padding-top: 78px
     .navbar
         display: none
+        position: fixed
+        lef: 0
+        right: 0
+        top: 78px
+        bottom: 0
+        &--visible
+            display: block
+            width: 100%
+        &-menu
+            display: flex
+            flex-direction: column
+            &__item
+                margin-bottom: 20px
+                &--mobile
+                    &--visible
+                        display: flex
     .header
-        &__search, &__user
-            display: none
+        &--mobile
+            &--fixed
+                position: fixed
+                left: 0
+                right: 0
+                top: 0
+                z-index: 99 
+        &__search, &__user            
+            &--mobile
+                &--hidden
+                    display: none
+                &--visible
+                    display: flex
+        &__user
+            flex-direction: column
     .logo
         width: 133px
     .menu
@@ -151,6 +182,16 @@
                 width: 16px
                 height: 1px
                 background-color: $text-color
+    .user
+        margin-top: 10px
+        &__name
+            &--light
+                margin-left: 0
+                margin-top: 10px
+                margin-bottom: 12px
+                color: $light
+    .search
+        margin-bottom: 20px
     .stars
         flex-basis: auto
     .hotel
@@ -416,7 +457,7 @@
         &__title
             &--inline
             margin-bottom: 16px
-            margin-right: 143px 
+            margin-right: 0 
         &__bottom
             &-links 
                 // max-width: 177px

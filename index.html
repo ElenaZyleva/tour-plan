@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header header--mobile--fixed">
       <div class="container">
         <div class="header-top">
           <a href="#" class="logo">
@@ -24,7 +24,7 @@
           </a>
           <!-- /.logo -->
 
-          <form action="#" class="search header__search">
+          <form action="#" class="search header__search header__search--mobile--hidden">
             <input
               type="text"
               class="search__input"
@@ -36,7 +36,7 @@
           </form>
           <!-- /.search -->
 
-          <a href="#" class="user header__user">
+          <a href="#" class="user header__user header__user--mobile--hidden">
             <img
               src="img/user-avatar.jpg"
               alt="Avatar: Nathan"
@@ -58,10 +58,34 @@
       <div class="navbar">
         <div class="container">
           <ul class="navbar-menu">
+            <li class="navbar-menu__item navbar-menu--mobile--visible">
+              <a href="#" class="user header__user header__user--mobile--visible">
+                <img
+                  src="img/user-avatar.jpg"
+                  alt="Avatar: Nathan"
+                  class="user__avatar"
+                />
+                <span class="user__name user__name--light">Nathan</span>
+              </a>
+              <!-- /.user -->
+            </li>
+            <li class="navbar-menu__item navbar-menu--mobile--visible">
+              <form action="#" class="search header__search header__search--mobile--visible">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Search Location"
+                />
+                <button class="search__button">
+                  <img src="img/search.svg" alt="Icon: search" />
+                </button>
+              </form>
+              <!-- /.search -->
+            </li>
             <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">All Deals</a>
             </li>
-            <li class="navbar-menu">
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Hotels</a>
             </li>
             <li class="navbar-menu__item">
@@ -489,9 +513,9 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__link"><img src="img/facebook.svg" alt="Icon: facebook"></a>
-              <a href="#" class="footer__link"><img src="img/youtube.svg" alt="Icon: youtube"></a>
-              <a href="#" class="footer__link"><img src="img/inst.svg" alt="Icon: instagram"></a>
+              <a href="https://www.facebook.com" class="footer__link"><img src="img/facebook.svg" alt="Icon: facebook"></a>
+              <a href="https://www.youtube.com" class="footer__link"><img src="img/youtube.svg" alt="Icon: youtube"></a>
+              <a href="https://www.instagram.com/" class="footer__link"><img src="img/inst.svg" alt="Icon: instagram"></a>
             </div>
             <!-- /.footer_social-links -->
           </div>
@@ -525,9 +549,9 @@
                   <img class="footer__icon" src="img/phone-call.svg" alt="Icon: phone call">
                 </div>
                 <p class="footer__item-text">
-                  Tel (business hours) : 269 1500<br>
-                  Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)<br>
-                  Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                  Tel (business hours) : <a href="tel:269 1500" >269 1500</a><br>
+                  Tel (hotline) Monday - Saturday: <a href="tel:52-56-61-38" >52-56-61-38</a> (08:00 am – 20:00 pm)<br>
+                  Tel (hotline) Sunday: <a href="tel:52-56-61-38" >52-56-61-38</a> (08:00 am – 14:00 pm)
                 </p>
               </li>
               <li class="footer__item footer__item-wrapper">
@@ -547,8 +571,8 @@
             <form action="#" class="footer__form">
               <input class="input footer__input" type="text"  placeholder="Your Full Name*">
               <input class="input footer__input" type="text"  placeholder="Phone Number*">
-              <textarea class="footer__message" cols="30" rows="10"  placeholder="Message"></textarea>
-              <button class="buuton footer__button" type="submit">Send</button>
+              <textarea class="footer__message" placeholder="Message"></textarea>
+              <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
             <!-- /.footer__form -->
