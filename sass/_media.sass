@@ -122,8 +122,7 @@
                 justify-content: flex-start
                 padding-left: 0
         &__input
-            flex-basis: 48%   
-
+            flex-basis: 48% 
 
 /* max-width:  767px */         
 @media ( max-width:  767px)
@@ -134,6 +133,9 @@
     .navbar
         display: none
         position: fixed
+        // _______________---------------------------
+        max-height: 100vh
+        overflow-y: auto
         lef: 0
         right: 0
         top: 78px
@@ -268,7 +270,7 @@
     .footer
         &__input
             flex-basis: 100%   
-                        
+
 /* max-width:  576px */ 
 @media ( max-width:  576px)
     .container, .newsletter-wrapper
@@ -279,13 +281,11 @@
         object-fit: cover
     .hotel
         padding-bottom: 40px
-        &__slider
-            margin-bottom: 20px
         &-right
             &__info
                 margin-bottom: 20px
-    .hotel
         &-slider
+            margin-bottom: 20px
             height: 285px
             width: 100%
             &__img
@@ -356,12 +356,14 @@
         &__pay-icons
             grid-column: 1 / 2
             grid-row: 2
-
             
 /* max-width:  480px */
 @media ( max-width:  480px)
     .container, .newsletter-wrapper
         max-width: 320px
+    .search    
+        &__input
+            width: 310px       
     .hotel
         &-slider
             height: 198px 
@@ -417,6 +419,9 @@
 @media ( max-width:  360px)
     .container, .newsletter-wrapper
         max-width: 280px
+    .search    
+        &__input
+            width: 245px     
     .swiper-slide
         object-fit: cover
     .hotel

@@ -426,7 +426,7 @@ template {
   text-transform: uppercase;
 }
 
-.navbar-menu--mobile {
+.navbar-menu__item--mobile--visible {
   display: none;
 }
 
@@ -558,6 +558,10 @@ template {
   font-style: Bold;
   font-size: 24px;
   line-height: 30px;
+}
+
+.hotel-name--thankyou {
+  margin-bottom: 50px;
 }
 
 .hotel-wrapper {
@@ -899,6 +903,22 @@ template {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+}
+
+.subscribe__input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.subscribe__input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.subscribe__input::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.subscribe__input::placeholder {
+  color: #bdbdbd;
 }
 
 .subscribe__button {
@@ -1618,6 +1638,8 @@ template {
   .navbar {
     display: none;
     position: fixed;
+    max-height: 100vh;
+    overflow-y: auto;
     lef: 0;
     right: 0;
     top: 78px;
@@ -1844,13 +1866,11 @@ template {
   .hotel {
     padding-bottom: 40px;
   }
-  .hotel__slider {
-    margin-bottom: 20px;
-  }
   .hotel-right__info {
     margin-bottom: 20px;
   }
   .hotel-slider {
+    margin-bottom: 20px;
     height: 285px;
     width: 100%;
   }
@@ -1966,6 +1986,9 @@ template {
   .container, .newsletter-wrapper {
     max-width: 320px;
   }
+  .search__input {
+    width: 310px;
+  }
   .hotel-slider {
     height: 198px;
     width: 320px;
@@ -2043,6 +2066,9 @@ template {
 @media (max-width: 360px) {
   .container, .newsletter-wrapper {
     max-width: 280px;
+  }
+  .search__input {
+    width: 245px;
   }
   .swiper-slide {
     -o-object-fit: cover;

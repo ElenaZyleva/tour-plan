@@ -58,7 +58,7 @@
       <div class="navbar">
         <div class="container">
           <ul class="navbar-menu">
-            <li class="navbar-menu__item navbar-menu--mobile--visible">
+            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
               <a href="#" class="user header__user header__user--mobile--visible">
                 <img
                   src="img/user-avatar.jpg"
@@ -69,7 +69,7 @@
               </a>
               <!-- /.user -->
             </li>
-            <li class="navbar-menu__item navbar-menu--mobile--visible">
+            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
               <form action="#" class="search header__search header__search--mobile--visible">
                 <input
                   type="text"
@@ -513,9 +513,9 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="https://www.facebook.com" class="footer__link"><img src="img/facebook.svg" alt="Icon: facebook"></a>
-              <a href="https://www.youtube.com" class="footer__link"><img src="img/youtube.svg" alt="Icon: youtube"></a>
-              <a href="https://www.instagram.com/" class="footer__link"><img src="img/inst.svg" alt="Icon: instagram"></a>
+              <a href="https://www.facebook.com" class="footer__link" target="_blank"><img src="img/facebook.svg" alt="Icon: facebook"></a>
+              <a href="https://www.youtube.com" class="footer__link" target="_blank"><img src="img/youtube.svg" alt="Icon: youtube"></a>
+              <a href="https://www.instagram.com/" class="footer__link" target="_blank"><img src="img/inst.svg" alt="Icon: instagram"></a>
             </div>
             <!-- /.footer_social-links -->
           </div>
@@ -568,10 +568,10 @@
 
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="#" class="footer__form">
-              <input class="input footer__input" type="text"  placeholder="Your Full Name*">
-              <input class="input footer__input" type="text"  placeholder="Phone Number*">
-              <textarea class="footer__message" placeholder="Message"></textarea>
+            <form action="send.php" method="POST" class="footer__form">
+              <input class="input footer__input" type="text" name="name" placeholder="Your Full Name*">
+              <input class="input footer__input" type="text"  name="phone" placeholder="Phone Number*">
+              <textarea class="footer__message" name="message" placeholder="Message"></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
