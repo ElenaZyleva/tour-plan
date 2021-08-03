@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Файлы phpmailer
 require 'phpMailer/PHPMailer.php';
 require 'phpMailer/SMTP.php';
@@ -7,16 +9,35 @@ require 'phpMailer/Exception.php';
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];
+$email = $_POST['email'];
+$newsletterEmail = $_POST['newsletterEmail'];
 $message = $_POST['message'];
 
 // Формирование самого письма
 $title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+
+if ((isset($newsletterEmail) & !empty($newsletterEmail))) {
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Email для рассылки: </b>$newsletterEmail<br>    
+    ";
+} else {
+    if ((isset($email) & !empty($email))) {
+        $body = "
+        <b>Имя:</b>$name<br>
+        <b>Телефон:</b> $phone<br><br>
+        <b>Email:</b> $email<br><br>
+        <b>Сообщение:</b><br>$message
+        ";
+    } else {
+        $body = "
+        <h2>Новое обращение</h2>
+        <b>Имя:</b>$name<br>
+        <b>Телефон:</b> $phone<br><br>
+        <b>Сообщение:</b><br>$message
+        ";
+    }
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -53,6 +74,12 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: thankyou.html');
+if ((isset($newsletterEmail) & empty($newsletterEmail))) {
+    $text = "Our manager will call you within 7 minutes.";
+} else {
+    $text = "Thank you for signing up";
+}
+$_SESSION['text'] = $text;
+header('Location: thankyou.php');
 die();
 ?>
