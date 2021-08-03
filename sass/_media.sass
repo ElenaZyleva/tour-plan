@@ -123,6 +123,11 @@
                 padding-left: 0
         &__input
             flex-basis: 48% 
+    .modal
+        &__dialog
+            width: 478px //----------------------
+            padding: 33px 83px    
+
 
 /* max-width:  767px */         
 @media ( max-width:  767px)
@@ -133,7 +138,7 @@
     .navbar
         display: none
         position: fixed
-        // _______________---------------------------
+        // ---------------------------
         max-height: 100vh
         overflow-y: auto
         lef: 0
@@ -209,6 +214,8 @@
             &__name
                 margin-top: 10px
                 margin-bottom: 0
+                &--thankyou
+                    margin-bottom: 20px
             &__rating
                 display: none
             &__offer
@@ -269,7 +276,11 @@
             left: -16% 
     .footer
         &__input
-            flex-basis: 100%   
+            flex-basis: 100% 
+    .modal
+        &__dialog
+            width: 478px //----------------------
+            padding: 33px 77px    
 
 /* max-width:  576px */ 
 @media ( max-width:  576px)
@@ -356,6 +367,10 @@
         &__pay-icons
             grid-column: 1 / 2
             grid-row: 2
+    .modal
+        &__dialog
+            width: 80%
+            padding: 33px 40px      
             
 /* max-width:  480px */
 @media ( max-width:  480px)
@@ -414,6 +429,10 @@
         &__info
             margin-bottom: 15px
             flex-basis: 100%
+    .modal
+        &__dialog
+            width: 90%
+            padding: 33px 20px      
      
 /* max-width:  360px */            
 @media ( max-width:  360px)
@@ -453,7 +472,8 @@
             max-width: 260px 
         &__social
             &-links
-                max-width: 83px        
+                max-width: 83px 
+                
         &__button            
             order: 1
         &__info
@@ -462,7 +482,7 @@
         &__title
             &--inline
             margin-bottom: 16px
-            margin-right: 0 
+            margin-right: 100px 
         &__bottom
             &-links 
                 // max-width: 177px
@@ -470,4 +490,11 @@
                 padding-left: 0              
             &-link                     
                 margin-right: 0
+    .modal
+        &__button
+            width: 100%
+            margin-bottom: 15px
+
+
+     
             
