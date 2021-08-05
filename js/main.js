@@ -129,17 +129,11 @@ $(document).ready( function(){
           email: "Ваш email адрес должен быть в формате name@domain.com"
         },
       },      
-    });
-    
-    
-
+    });   
   });
-
-  
-    
-
 });
 
+AOS.init();
    
   
  
