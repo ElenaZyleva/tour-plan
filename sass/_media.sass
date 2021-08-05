@@ -22,7 +22,9 @@
             height: 230px
     .footer
         &__input
-            flex-basis: 100%
+            width: 100%
+            &-group
+                flex-basis: 100%
 
 /* max-width:  991px */ 
 @media ( max-width:  991px)
@@ -122,10 +124,15 @@
                 justify-content: flex-start
                 padding-left: 0
         &__input
-            flex-basis: 48% 
+            width: 100%
+            &-group
+                flex-basis: 48% 
     .modal
         &__dialog
-            width: 478px //----------------------
+            mix-height: 100vh
+            overflow-y: auto   
+            max-height: 100%
+            width: 478px 
             padding: 33px 83px    
 
 
@@ -276,11 +283,16 @@
             left: -16% 
     .footer
         &__input
-            flex-basis: 100% 
-    .modal
+            width: 100%
+            &-group
+                flex-basis: 100% 
+    .modal          
         &__dialog
-            width: 478px //----------------------
-            padding: 33px 77px    
+            mix-height: 100vh
+            overflow-y: auto   
+            width: 478px 
+            padding: 33px 77px
+             
 
 /* max-width:  576px */ 
 @media ( max-width:  576px)

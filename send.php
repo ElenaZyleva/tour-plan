@@ -73,11 +73,11 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-// Отображение результата
-if ((isset($newsletterEmail) & empty($newsletterEmail))) {
-    $text = "Our manager will call you within 7 minutes.";
-} else {
+/// Отображение результата
+if ((isset($newsletterEmail) & !empty($newsletterEmail))) {
     $text = "Thank you for signing up";
+} else {
+    $text = "Our manager will call you within 7 minutes.";
 }
 $_SESSION['text'] = $text;
 header('Location: thankyou.php');

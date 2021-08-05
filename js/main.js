@@ -1,4 +1,9 @@
+$(document).ready( function(){
+  // вызов нужных функций скрипта
 
+  /*добавляем маску к input с id = phone*/
+  $(".phone").mask("+7 (999) 999-99-99");
+  
   var hotelSlider = new Swiper('.hotel-slider', {
     // Optional parameters    
     loop: true,
@@ -45,18 +50,20 @@
   // Close modal
   var modalButton = document.querySelector("[data-toggle=modal]");
   var closeModalButton = document.querySelector("[data-toggle=close]");
+  var overlay = document.querySelector(".modal__overlay");
 
   modalButton.addEventListener('click', openModal);
   closeModalButton.addEventListener('click', closeOpenModal);
+  overlay.addEventListener('click', closeOpenModal);
     
-    function openModal() {
+  function openModal() {
       
-      var modalOverlay = document.querySelector('.modal__overlay');
-      var modalDialog = document.querySelector('.modal__dialog');
+    var modalOverlay = document.querySelector('.modal__overlay');
+    var modalDialog = document.querySelector('.modal__dialog');
 
-      modalOverlay.classList.add('modal__overlay--visible'); 
-      modalDialog.classList.add('modal__dialog--visible'); 
-    };
+    modalOverlay.classList.add('modal__overlay--visible'); 
+    modalDialog.classList.add('modal__dialog--visible'); 
+  };
 
     //Close on Esc
   //   document.addEventListener('keydown', function(event){
@@ -76,7 +83,6 @@
     };
   });
 
-
     function closeOpenModal(event) {
       event.preventDefault();
 
@@ -84,11 +90,56 @@
       var modalDialog = document.querySelector('.modal__dialog');
 
       modalOverlay.classList.remove('modal__overlay--visible'); 
-      modalDialog.classList.remove('modal__dialog--visible'); 
-            
+      modalDialog.classList.remove('modal__dialog--visible');             
     }; 
+
+  
+    // Валидация форм
+  $('.form').each(function() {
+    $(this).validate({
+      errorClass: "invalid",
+      
+      messages: {
+        name: {
+          required: "Укажите имя",
+          minlength: "Имя должно быть не короче 2 символов",
+        },       
+        email: {
+          required: "Укажите адрес электронной почты",
+          email: "Ваш email адрес должен быть в формате name@domain.com"
+        },
+        phone: {
+          required: "Укажите телефон",
+        },
+      }
+    }); 
+       
+    // Валидация форм
+    $(".subscribe").validate({
+      errorClass: "error",
+      validClass: "success",      
+      
+      errorPlacement: function(error, element) {        
+        $("#newsletterEmail-error").remove();
+        error.appendTo("#newsletter__wrap");        
+      },
+      messages: {        
+        newsletterEmail: {
+          required: "Укажите email",
+          email: "Ваш email адрес должен быть в формате name@domain.com"
+        },
+      },      
+    });
     
     
+
+  });
+
+  
+    
+
+});
+
    
   
  

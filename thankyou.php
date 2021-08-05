@@ -161,7 +161,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="index.html"><img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo"></a>
+          <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo">
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -191,7 +191,7 @@
           <!-- /.footer__list -->
 
           <div class="footer__social-network">
-            <h3 class="footer__title footer__title--inline footer__social-network--inline">Social Network</h3>
+            <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
               <a href="https://www.facebook.com" class="footer__link" target="_blank"><img src="img/facebook.svg" alt="Icon: facebook"></a>
               <a href="https://www.youtube.com" class="footer__link" target="_blank"><img src="img/youtube.svg" alt="Icon: youtube"></a>
