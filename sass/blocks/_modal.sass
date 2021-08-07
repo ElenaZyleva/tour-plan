@@ -36,7 +36,7 @@
         right: 18px
         text-decoration: none
         cursor: pointer
-    &__form
+    &__form        
         display: flex
         align-items: center
         justify-content: space-between
@@ -50,11 +50,12 @@
         line-height: 23px 
         text-transform: uppercase 
         text-align: center
-    &__input
+    &__input        
         padding: 0 23px 
         height: 50px
-        margin-top: 15px 
-        flex-basis: 100% 
+        // margin-top: 15px 
+        width: 100% 
+        // flex-basis: 100% 
         font-style: normal
         font-weight: normal
         font-size: 12px
@@ -64,6 +65,13 @@
         border: none
         &::placeholder
             color: $link-color
+        &-group
+            position: relative
+            display: flex
+            flex-direction: column-reverse
+            align-items: flex-start
+            margin-top: 15px 
+            flex-basis: 100% 
     &__message
         height: 123px
         flex-basis: 100%

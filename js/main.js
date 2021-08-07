@@ -63,14 +63,7 @@ $(document).ready( function(){
 
     modalOverlay.classList.add('modal__overlay--visible'); 
     modalDialog.classList.add('modal__dialog--visible'); 
-  };
-
-    //Close on Esc
-  //   document.addEventListener('keydown', function(event){
-  //     console.log('Строковый код: ', event.code);
-  //     console.log('ASCII код: ', event.charCode);
-  // });
-
+  };  
 
   document.addEventListener('keydown', function (e) {
       
@@ -90,43 +83,52 @@ $(document).ready( function(){
       var modalDialog = document.querySelector('.modal__dialog');
 
       modalOverlay.classList.remove('modal__overlay--visible'); 
-      modalDialog.classList.remove('modal__dialog--visible');             
+      modalDialog.classList.remove('modal__dialog--visible'); 
+      
+      // document.querySelector('#name-modal').value = "";
+      // document.querySelector('#phone-modal').value = "";
+      // document.querySelector('#email-modal').value = "";
+      // document.querySelector('.modal__message').value = "";      
     }; 
 
   
     // Валидация форм
   $('.form').each(function() {
     $(this).validate({
-      errorClass: "invalid",
-      
+      errorClass: "error",
       messages: {
         name: {
-          required: "Укажите имя",
-          minlength: "Имя должно быть не короче 2 символов",
+          required: "Please specify your name",
+          minlength: "Name must be at least 2 charactersв",
+        },
+        newsletterEmail: {
+          required: "We need your email address to contact you",
+          email: "Your email must be in the format of name@domain.com",
         },       
         email: {
-          required: "Укажите адрес электронной почты",
-          email: "Ваш email адрес должен быть в формате name@domain.com"
+          required: "We need your email address to contact you",
+          email: "Your email must be in the format of name@domain.com"
         },
         phone: {
-          required: "Укажите телефон",
+          required: "We need your phone number to contact you",
+          minlength: "Your phone must be in the format of +7(999)999-99-99",                   
         },
       }
     }); 
        
-    // Валидация форм
+    // Валидация формы subscribe
     $(".subscribe").validate({
       errorClass: "error",
-      validClass: "success",      
+      // validClass: "success",      
       
-      errorPlacement: function(error, element) {        
-        $("#newsletterEmail-error").remove();
-        error.appendTo("#newsletter__wrap");        
-      },
+      // errorPlacement: function(error, element) {        
+      //   $("#newsletterEmail-error").remove();
+      //   error.appendTo("#newsletter__wrap");        
+      // },
       messages: {        
         newsletterEmail: {
-          required: "Укажите email",
-          email: "Ваш email адрес должен быть в формате name@domain.com"
+          required: "We need your email address to contact you",
+          email: "Your email must be in the format of name@domain.com"
         },
       },      
     });   
